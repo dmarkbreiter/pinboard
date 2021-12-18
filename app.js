@@ -1,4 +1,15 @@
 
+// Determines order of sections
+const order = [
+  'knick knacks',
+  'cactus planters',
+  'throws',
+  'webcams',
+  'beds',
+  'desks'
+]
+
+// Object with all sections of items
 const data = {
   desks: [
     {
@@ -175,6 +186,16 @@ const data = {
         dimensions: '2.5" w x 1.875" h'
       }
     },
+    {
+      name: 'Match Cloche',
+      image: 'https://images.urbndata.com/is/image/Anthropologie/59472647_053_b10?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=540',
+      link: 'https://www.anthropologie.com/shop/match-cloche?color=053&size=One%20Size&inventoryCountry=US&countryCode=US&utm_medium=paid_search&utm_source=Google&utm_campaign=US%20-%20Shopping%20-%20Home%20-%20SC%20PLAs%20-%20Backorder&utm_content=All%20Products&utm_term=PRODUCT_GROUP&creative=546307230421&device=c&matchtype=&network=g&utm_kxconfid=vx6rd81ts&gclid=Cj0KCQiAqvaNBhDLARIsAH1Pq51E0bSvDXmI0Bw4r9t3EDUETbUK3x_lSw4qyKThHjmlSgtAh-9V618aAnn5EALw_wcB&gclsrc=aw.ds&type=STANDARD&quantity=1',
+      company: 'Skeem',
+      attributes: {
+        price: '$34',
+        dimensions: '3" w x 7" h'
+      }
+    },
   ],
   beds: [
     {
@@ -249,9 +270,10 @@ class Fragment {
 
 var fragment = new Fragment();
 
-const sections = Object.keys(data);
 
-sections.forEach(section => {
+// const sections = Object.keys(data);
+
+order.forEach(section => {
   sectionObj = data[section];
   fragment.addSection(sectionObj, section);
 });
