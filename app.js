@@ -283,7 +283,7 @@ class Fragment {
    // Create figure
    const figure = this.#createEl('figure');
    figure.innerHTML = `
-   <a href="${item.link}" target="_blank">
+   <a href="${item.link}">
       <img src=${item.image}>
    </a>
    `
