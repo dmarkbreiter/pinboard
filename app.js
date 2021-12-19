@@ -3,10 +3,11 @@
 const order = [
   'knick knacks',
   'cactus planters',
+  'lamps',
   'throws',
   'webcams',
   'beds',
-  'desks'
+  'desks',
 ]
 
 // Object with all sections of items
@@ -145,12 +146,22 @@ const data = {
   ],
   throws: [
     {
-      name: 'Cotton Waffle Throw, Golden Oak',
+      name: 'Cotton Waffle Throw',
       image: 'https://assets.weimgs.com/weimgs/rk/images/wcm/products/202124/0279/img5z.jpg',
       link: 'https://www.westelm.com/products/cotton-waffle-throw-t6224/?catalogId=71&sku=4639245&cm_ven=PLA&cm_cat=Google&cm_pla=Pillows%20%26%20Decor%20%3E%20Throws&region_id=669090&cm_ite=4639245&gclid=CjwKCAjwhOyJBhA4EiwAEcJdcSnk-iSbf1KqxWLANtE4QZui02dW-uYd5-hjrybfzuuxo1c1U5WEaBoCFvoQAvD_BwE',
       company: 'West Elm',
       attributes: {
         price: '$50',
+        dimensions: '50 x 60"',
+      }
+    },
+    {
+      name: 'Cotton Knit Throw',
+      image: 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202151/0011/cotton-knit-throws-z.jpg',
+      link: 'https://www.westelm.com/products/cotton-knit-throws-b2607/?pkey=cthrow-blankets&sku=cm_src=throw-blankets||NoFacet-_-NoFacet-_--_-&cm_src=reducedClick&isx=0.0.479',
+      company: 'West Elm',
+      attributes: {
+        price: '$80',
         dimensions: '50 x 60"',
       }
     },
@@ -217,6 +228,18 @@ const data = {
       }
     },
   ],
+  'lamps': [
+    {
+      name: 'Macaron Floor Lamp',
+      image: 'https://images.beautifulhalo.com/images/v/201807/H/1531417072749.jpg',
+      link: 'https://www.beautifulhalo.com/adjustable-metal-floor-light-with-elongated-dome-modern-fashion-1-light-standing-light-for-kids-p-307800.html',
+      company: 'Beautiful Halo',
+      attributes: {
+        price: '$220',
+        dimensions: '61" h'
+      }
+    },
+  ],
   beds: [
     {
       name: 'Dris bed',
@@ -260,11 +283,14 @@ class Fragment {
    // Create figure
    const figure = this.#createEl('figure');
    figure.innerHTML = `
-    <img src=${item.image}>
+   <a href="${item.link}" target="_blank">
+      <img src=${item.image}>
+   </a>
    `
    let figcaption = this.#createEl('figcaption');
    figure.appendChild(figcaption);
-   figcaption.innerHTML = `<a target="_blank" href=${item.link}><b>${item.company} | ${item.name}</b></a></br>`
+   figcaption.innerHTML = `<a class="name" target="_blank" href=${item.link}>${item.name}</a></br>`;
+   figcaption.innerHTML += `<b>${item.company}</b></br>`
 
    const attributes = item.attributes;
    for (let attribute of Object.keys(attributes)) {
