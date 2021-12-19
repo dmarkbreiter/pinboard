@@ -167,6 +167,16 @@ const data = {
       }
     },
     {
+      name: 'Wood Toothbrush holder',
+      image: 'https://i.etsystatic.com/13346155/r/il/4c1240/1328603428/il_794xN.1328603428_gbm5.jpg',
+      link: 'https://www.etsy.com/listing/566108731/pen-holder-vase-desk-organizer-stockholm?gpla=1&gao=1&&utm_source=google&utm_medium=cpc&utm_campaign=shopping_us_c-home_and_living-office-office_and_desk_storage&utm_custom1=_k_Cj0KCQiAqvaNBhDLARIsAH1Pq53nrjsmbyytlOG6A6MZvhIOArOggSbfrsOyL02Ylv_X79Vr8fAHVFQaAvdaEALw_wcB_k_&utm_content=go_12561588948_119850676535_506949558652_pla-305377240956_c__566108731_113468305&utm_custom2=12561588948&gclid=Cj0KCQiAqvaNBhDLARIsAH1Pq53nrjsmbyytlOG6A6MZvhIOArOggSbfrsOyL02Ylv_X79Vr8fAHVFQaAvdaEALw_wcB',
+      company: 'pretti.cool',
+      attributes: {
+        price: '$32.00',
+        dimensions: '2.5" w x 3" h'
+      }
+    },
+    {
       name: '4" vessel',
       image: 'https://cdn.shopify.com/s/files/1/0223/7523/5648/products/pretti_cool_Product_Square_Web_220_1024x1024@2x.jpg?v=1593543080',
       link: 'https://pretti.cool/collections/all-products/products/4-vessels?variant=25950116970560',
@@ -174,6 +184,16 @@ const data = {
       attributes: {
         price: '$32',
         dimensions: '4" w x 2 7/8" h'
+      }
+    },
+    {
+      name: '3.5" vessel',
+      image: 'https://i.etsystatic.com/13346155/r/il/2b42f8/2976245581/il_794xN.2976245581_r9v8.jpg',
+      link: 'https://pretti.cool/collections/all-products/products/4-vessels?variant=25950116970560',
+      company: 'MinimumDesign',
+      attributes: {
+        price: '$32',
+        dimensions: '3.5" w x 3" h'
       }
     },
     {
