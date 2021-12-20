@@ -2,6 +2,7 @@
 // Determines order of sections
 const order = [
   'knick knacks',
+  'rugs',
   'cactus planters',
   'lamps',
   'throws',
@@ -166,6 +167,41 @@ const data = {
       }
     },
   ],
+  rugs: [
+    {
+      name: 'Stockholm 2017',
+      image: 'https://www.ikea.com/us/en/images/products/stockholm-2017-rug-flatwoven-handmade-zigzag-pattern-orange__0448983_pe598554_s5.jpg?f=s',
+      link: 'https://www.ikea.com/us/en/p/stockholm-2017-rug-flatwoven-handmade-zigzag-pattern-orange-00345243/',
+      company: 'Ikea',
+      attributes: {
+        price: '$250',
+        dimensions: `5 7" x 7'10 "`,
+        material: '100% wool'
+      }
+    },
+    {
+      name: 'Copper with white stripe rug',
+      image: 'https://cb2.scene7.com/is/image/CB2/CopperWWhiteStripeRug5X8S20/$web_pdp_main_carousel_md$/210505163842/copper-with-white-stripe-rug-5x8.jpg',
+      link: 'https://www.cb2.com/copper-with-white-stripe-rug-5x8/s452871',
+      company: 'CB2',
+      attributes: {
+        price: '$200',
+        dimensions: `5" x 8'`,
+        material: '100% wool'
+      }
+    },
+    {
+      name: 'Geometric Yellow Rug',
+      image: 'https://i.etsystatic.com/32993596/r/il/41c3b7/3563759113/il_794xN.3563759113_sog9.jpg',
+      link: 'https://www.etsy.com/listing/967756065/new-modern-style-hand-tufted-area-rug?click_key=8f7ded5e3e91895b47dc9e321b9c9942ceed5c40%3A967756065&click_sum=91fe3aec&ref=related-1&pro=1&frs=1&sts=1&variation0=1847951175',
+      company: 'Etsy',
+      attributes: {
+        price: '$268',
+        dimensions: `5" x 8'`,
+        material: '100% wool'
+      }
+    },
+  ],
   'knick knacks': [
     {
       name: 'Toothbrush holder',
@@ -283,7 +319,7 @@ class Fragment {
    // Create figure
    const figure = this.#createEl('figure');
    figure.innerHTML = `
-   <a href="${item.link}">
+   <a target="_blank" href="${item.link}">
       <img src=${item.image}>
    </a>
    `
